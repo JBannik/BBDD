@@ -9,10 +9,10 @@ import java.util.List;
 
 public class PersonaBBDD {
 	
-	private final String SQL_INSERT = "INSERT INTO persona (id,nombre,fechaNacimiento) VALUES(?,?,?)";
-	private final String SQL_UPDATE = "UPDATE persona SET nombre=?, fechaNacimiento=? WHERE id=?";
-	private final String SQL_DELETE = "DELETE FROM persona WHERE id=?";
-	private final String SQL_SELECT = "SELECT * FROM persona ORDER BY id";
+	private final String SQL_INSERT = "INSERT INTO Persona (Nombre,id,fechaNacimiento) VALUES(?,?,?)";
+	private final String SQL_UPDATE = "UPDATE Persona SET Nombre=?, fechaNacimiento=? WHERE id=?";
+	private final String SQL_DELETE = "DELETE FROM Persona WHERE id=?";
+	private final String SQL_SELECT = "SELECT * FROM Persona ORDER BY id";
 	
 	
 	public int insert(int id, String nombre, LocalDate fechaNacimiento) 
@@ -29,8 +29,8 @@ public class PersonaBBDD {
 			conn = AccesoDatosBD.estableceConexion();
 			stmt = conn.prepareStatement(SQL_INSERT);
 			int index = 1;//contador de columnas
-			stmt.setInt(index++, id);
 			stmt.setString(index++, nombre);//param 1 => ?
+			stmt.setInt(index++, id);
 			stmt.setDate(index++,date);
 			System.out.println("Ejecutando query:" + SQL_INSERT);
 			rows = stmt.executeUpdate();//no. registros afectados
@@ -109,8 +109,8 @@ public class PersonaBBDD {
 			stmt = conn.prepareStatement(SQL_SELECT);
 			rs = stmt.executeQuery();
 			while (rs.next()) {
-				int id = rs.getInt(1);
-				String nombre = rs.getString(2);
+				int id = rs.getInt(2);
+				String nombre = rs.getString(1);
 				Date date = rs.getDate(3);
 				persona = new Persona();
 				persona.setId(id);

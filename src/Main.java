@@ -32,7 +32,7 @@ public class Main {
 			{ 
 
 				System.out.print("\nOperaciones a realizar en la tabla Persona");
-				System.out.print("\n\t1 Insetar persona");
+				System.out.print("\n\t1 Insertar persona");
 				System.out.print("\n\t2 Actualizar persona");
 				System.out.print("\n\t3 Borrar persona");
 				System.out.print("\n\t4 Listar persona");

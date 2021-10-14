@@ -1,4 +1,6 @@
-URL=jdbc:mysql://localhost/entidadNegocio?serverTimezone=Europe/Rome
-
+URL=jdbc:mysql://
+PORT=localhost
+TABLE=entidadNegocio
+TZ=?serverTimezone=Europe/Rome
 USUARIO=root
 CLAVE=

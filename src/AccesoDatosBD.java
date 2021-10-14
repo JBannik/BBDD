@@ -10,7 +10,7 @@ public class AccesoDatosBD {
 		// ESTO ES CON EL OBJETO PROPERTIES, PARA PODER MODIFICAR LA CONEXION DESDE UN FICHERO
 	    Properties properties= new Properties();
 	    try {
-	      properties.load(new FileInputStream(new File("configuracion.conexion")));
+	      properties.load(new FileInputStream(new File("configuracion2.conexion")));
 	      
 //	      System.out.println(properties.get("DRIVER"));
 //	      System.out.println(properties.get("URL"));
@@ -23,16 +23,23 @@ public class AccesoDatosBD {
 //	      properties.get("CLAVE");
 	      
 	      //String Driver = properties.getProperty("DRIVER");
-	      String Url = properties.getProperty("URL");
+//	      String Url = properties.getProperty("URL");
+//	      String port = properties.getProperty("PORT");
+//	      String table = properties.getProperty("TALBE");
+//	      String tz = properties.getProperty("TZ");
+//	      String ddbb = Url + port + "/"+ table+ tz;
+//	      String Usuario = properties.getProperty("USUARIO");
+//	      String Clave = properties.getProperty("CLAVE");
 	      
-	      String Usuario = properties.getProperty("USUARIO");
-	      String Clave = properties.getProperty("CLAVE");
+	      String url = properties.getProperty("URL");
+	      String usuario = properties.getProperty("USUARIO");
+	      String clave = properties.getProperty("CLAVE");
 	      
 	      //String encadenaConexion= Driver + Url;
 	      
 	      System.out.println("Connected");
 	      
-	      conn = DriverManager.getConnection(Url, Usuario, Clave);
+	      conn = DriverManager.getConnection(url, usuario, clave);
 	      return conn;
 	      
 	    } catch (FileNotFoundException e) {

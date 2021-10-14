@@ -40,6 +40,6 @@ public class Persona {
  	
 	
 	public String toString() {
-		return "Persona [id=" + id + ", nombre=" + nombre + ", fechaNacimiento=" + fechaNac+ "]";
+		return "ID: "+ id + " | NOMBRE: " + nombre + " | NACIMIENTO: " + fechaNac;
 	}
 }

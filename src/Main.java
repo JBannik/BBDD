@@ -54,15 +54,15 @@ public class Main {
 					System.out.print("\nIntroduce el nombre de la persona");
 					nombre = tk.nextLine();
 					
-					System.out.println("\nIntroduce la fecha de nacimiento con formato: año, mes, dia");
+					System.out.println("\nIntroduce la fecha de nacimiento con formato: YYYY-MM-DD");
 					
 					System.out.println("Para comenzar introduce el año:");
 				    year = tk.nextInt();
 				    
-				    System.out.println("Para comenzar introduce el mes:");
+				    System.out.println("Introduce el mes:");
 				    mes = tk.nextInt();
 				    
-				    System.out.println("Para comenzar introduce el dia:");
+				    System.out.println("Introduce el dia:");
 				    dia = tk.nextInt();
 				    
 					fechaNacimiento = fechaNacimiento.of(year, mes, dia);
@@ -107,15 +107,15 @@ public class Main {
 					System.out.print("\nIntroduce el nuevo nombre de la persona");
 					nombre = tk.nextLine();
 					
-					System.out.println("\nIntroduce la fecha de nacimiento con formato: año, mes, dia");
+					System.out.println("\nIntroduce la fecha de nacimiento con formato: YYYY-MM-DD");
 					
 					System.out.println("Para comenzar introduce el año:");
 				    year = tk.nextInt();
 				    
-				    System.out.println("Para comenzar introduce el mes:");
+				    System.out.println("Introduce el mes:");
 				    mes = tk.nextInt();
 				    
-				    System.out.println("Para comenzar introduce el dia:");
+				    System.out.println("Introduce el dia:");
 				    dia = tk.nextInt();
 				    
 					fechaNacimiento = fechaNacimiento.of(year, mes, dia);
